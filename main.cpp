@@ -1,17 +1,13 @@
-#include <iostream>
-#include <chrono>
 #include "Timer.hpp"
+#include <chrono>
+#include <iostream>
 
-int seconds{1};
-int millis{1};
+int seconds {1};
+int millis {1};
 
-void printSeconds() {
-    std::cout << "Second number: " << seconds++ << '\n';
-}
+void printSeconds() { std::cout << "Second number: " << seconds++ << '\n'; }
 
-void printMillis() {
-    std::cout << "Millisecond number: " << millis++ * 100 << '\n';
-}
+void printMillis() { std::cout << "Millisecond number: " << millis++ * 100 << '\n'; }
 
 int main() {
     Timer timer(std::chrono::microseconds(1000));
